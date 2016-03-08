@@ -23,29 +23,14 @@ struct node* head;
 struct node * numberToLinkedList(int N) {
 	int t;
 	head = NULL;
-	if (N > 0){
-		
+	if (N < 0) N = N*(-1);
+	if (N == 0) insert(0);
 		while (N != 0){
 			t = N % 10;
 		    insert(t);
 			N = N / 10;
 		}
 		return head;
-	}
-	else if (N < 0){
-		N = N * (-1);
-		//head = NULL;
-		while (N != 0){
-			t = N % 10;
-			insert(t);
-			N = N / 10;
-		}
-		return head;
-	}
-	else if (N == 0){
-		insert(0);
-		return head;
-	}
 }
 void insert(int n){
 	node* temp = (node*)malloc(sizeof(node));
