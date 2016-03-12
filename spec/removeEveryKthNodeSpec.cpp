@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-#include "../src/removeEveryKthNode.cpp"
 #include <malloc.h>
+#include "../src/removeEveryKthNode.cpp"
+
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

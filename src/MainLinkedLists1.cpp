@@ -24,7 +24,12 @@ Objectives of C-LinkedLists-1 Lesson:
 
 //Do not edit below Header Files
 #include <stdio.h>
+//#include<stdlib.h>
 #include "FunctionHeadersLinkedLists1.h"
+struct node {
+	int num;
+	struct node *next;
+};
 
 int main(){
 

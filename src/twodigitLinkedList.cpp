@@ -24,10 +24,13 @@ void insert(int n);
 int convert_sll_2digit_to_int(struct node *head){
 	node* temp = head;
 	int number = 0;
+	int count = 0;
 	while (temp != NULL){
+		 if (temp->digit1 == 0 && temp->digit2 == 0 && count > 0) temp = temp->next;
 		number =number*10+temp->digit1;
 		number = number*10 + temp->digit2;
 		temp = temp->next;
+		count++;
 	}
 	return number;
 }
